@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MyLibrary.Model.Menu>
+<div class="collapse navbar-collapse" id="navbar-menu">
+    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+        @foreach (var menu1 in Model)
+        {
+            <li class="nav-item"><a class="nav-link" href="@menu1.Link">@menu1.Name</a></li>
+        }
+</div>

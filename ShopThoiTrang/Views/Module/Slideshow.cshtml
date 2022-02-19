@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MyLibrary.Model.Slider>
+<div id="slides-shop" class="cover-slides">
+    <ul class="slides-container">
+        @{ int index = 0;}
+        @foreach (var slider in Model)
+        {
+            if (index == 0)
+            {
+                <li class="text-left">
+                    <img src="~/Public/images/@slider.Img" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="m-b-20"><strong>Chào mừng bạn đến <br> Thewayshop</strong></h1>
+                                <p class="m-b-40">Chúng tôi luôn cập nhật các xu hướng thời trang HOT nhất hiện nay <br> và luôn tạo cho bạn cảm giác mới mẻ nhất.</p>
+                                <p><a class="btn hvr-hover" href="#">Mua ngay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+            else
+            {
+                <li class="text-left">
+                    <img src="~/Public/images/@slider.Img" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="m-b-20"><strong>Chào mừng bạn đến <br> Thewayshop</strong></h1>
+                                <p class="m-b-40">Chúng tôi luôn cập nhật các xu hướng thời trang HOT nhất hiện nay <br> và luôn tạo cho bạn cảm giác mới mẻ nhất.</p>
+                                <p><a class="btn hvr-hover" href="#">Mua ngay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+            index++;
+        }
+    </ul>
+    <div class="slides-navigation">
+        <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\MyLibrary.dll.config
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\MyLibrary.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\MyLibrary.pdb
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\EntityFramework.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\EntityFramework.xml
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\obj\Debug\MyLibrary.csproj.CopyComplete
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\obj\Debug\MyLibrary.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\obj\Debug\MyLibrary.pdb
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\PagedList.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\PagedList.Mvc.dll
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\PagedList.xml
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\bin\Debug\PagedList.Mvc.xml
+D:\ASPNET\HuynhThanhPhuong_2118110142\MyLibrary\obj\Debug\MyLibrary.csproj.AssemblyReference.cache

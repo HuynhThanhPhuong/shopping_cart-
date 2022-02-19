@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MyLibrary.Model.Category>
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+<section class="clearfix main mt-2">
+    <!-- Start Slider -->
+    @Html.Action("Slideshow", "Module")
+    <!-- End Slider -->
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                @Html.Action("ListCategory", "Module")
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
+    <!-- Start Products Hot -->
+    @Html.Action("ProductHot", "Module")
+    <!-- End Products Hot -->
+    <!-- Start Products Home -->
+    <div class="products-box">
+        <div class="container">
+
+            @foreach (var cat in Model)
+            {
+                @Html.Action("ProductHome", "Site", new { @catid = cat.Id, @name = cat.Name })
+            }
+        </div>
+    </div>
+    <!-- End Products Home  -->
+    <!-- Start Blog  -->
+    @Html.Action("LastNew", "Module")
+    <!-- End Blog  -->
+</section>

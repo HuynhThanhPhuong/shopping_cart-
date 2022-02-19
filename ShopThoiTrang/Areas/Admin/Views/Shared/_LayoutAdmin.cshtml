@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Public/css/LayoutAdmin.css" rel="stylesheet" />
+    <link href="~/Public/css/all.css" rel="stylesheet" />
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <section class="header bg-danger">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="~/admin">Trang chủ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="~/san-pham" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="~/admin/category">Loại sản phẩm</a>
+                                <a class="dropdown-item" href="~/admin/product">Sản phẩm</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="~/san-pham" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bài viết
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="~/admin/topic">Chủ đề bài viết</a>
+                                <a class="dropdown-item" href="~/admin/post">Bài viết</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/admin/menu">Menu<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/admin/slider">Slider<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <a href="~/trang-chu" class="mr-4 text-white">Quay lại</a>
+                    <a href="~/trang-chu" class="mr-4 text-white">Thoát</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="maincontent">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </section>
+    <section class="footer bg-danger">
+        <div class="container-fluid text-center py-3 text-light">
+            Thiết kế bởi: Huỳnh Thanh Phương
+        </div>
+
+    </section>
+
+</body>
+</html>

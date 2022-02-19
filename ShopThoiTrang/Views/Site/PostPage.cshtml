@@ -1,0 +1,59 @@
+﻿@model MyLibrary.Model.Post
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>VỀ CHÚNG TÔI</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/trang-chu">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Giới thiệu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+<!-- Start About Page  -->
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">@Model.Title</h2>
+                <p>
+                   @Html.Raw(Model.Detail)
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="banner-frame">
+                    <img class="img-thumbnail img-fluid" src="~/Public/images/@Model.Img" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>CHÚNG TÔI LUÔN TIN TƯỞNG</h3>
+                    
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>CHÚNG TÔI CHUYÊN NGHIỆP</h3>
+                    
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="service-block-inner">
+                    <h3>CHÚNG TÔI LÀ CHUYÊN GIA</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Page -->

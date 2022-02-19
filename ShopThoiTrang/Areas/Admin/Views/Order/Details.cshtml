@@ -1,0 +1,131 @@
+﻿@model MyLibrary.Model.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Userid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Userid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliveryaddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliveryaddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliveryname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliveryname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliveryemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliveryemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliveryphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliveryphone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Createdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exportdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exportdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.metadesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metadesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Create_At)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Create_At)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Create_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Create_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Update_At)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Update_At)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Update_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Update_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

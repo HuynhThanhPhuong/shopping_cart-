@@ -1,0 +1,37 @@
+﻿@model MyLibrary.Model.Topic
+@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2> TIN TỨC THỜI TRANG</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/trang-chu">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Tin tức</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="container mt-5">
+    @foreach (var row_other in ViewBag.ListOther)
+    {
+        <div class="card mb-3" style="max-width: 1000px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="~/Public/images/@row_other.Img" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <a href="~/@row_other.Slug">@row_other.Title</a>
+                        <p class="card-text">@row_other.Detail</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>

@@ -1,0 +1,118 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MyLibrary.Model.Products>
+@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Shop</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://localhost:44330/">Home</a></li>
+                    <li class="breadcrumb-item active">@ViewBag.Title</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+<!-- Start Shop Page  -->
+<div class="shop-box-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                <div class="product-categori">
+                    <div class="search-product">
+                        <form action="#">
+                            <input class="form-control" placeholder="Search here..." type="text">
+                            <button type="submit"> <i class="fa fa-search"></i> </button>
+                        </form>
+                    </div>
+
+                    <!--category-->
+                    @Html.Action("CategoryList", "Module")
+                    <!-- End category-->
+                </div>
+            </div>
+            <!--end seach category-->
+
+
+            <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+                <div class="right-product-box">
+                    <div class="product-item-filter row">
+                        <div class="col-12 col-sm-8 text-center text-sm-left">
+                            <div class="toolbar-sorter-right">
+                                <span>Sort by </span>
+                                <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$USD">
+                                    <option data-display="Select">Nothing</option>
+                                    <option value="1">Popularity</option>
+                                    <option value="2">High Price → High Price</option>
+                                    <option value="3">Low Price → High Price</option>
+                                    <option value="4">Best Selling</option>
+                                </select>
+                            </div>
+                            <p>Showing all 4 results</p>
+                        </div>
+                        <div class="col-12 col-sm-4 text-center text-sm-right">
+                            <ul class="nav nav-tabs ml-auto">
+                                <li>
+                                    <a class="nav-link active" href="#grid-view" data-toggle="tab"> <i class="fa fa-th"></i> </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#list-view" data-toggle="tab"> <i class="fa fa-list-ul"></i> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-product-box">
+                        <div class="row product-categorie-box">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+                                    <div class="row">
+                                        @foreach (var pro in Model)
+                                        {
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <img src="~/Public/images/product/@pro.Img" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text text-center">
+                                                        <a class="text-dark" href="~/@pro.Slug"> <h4> @pro.Name</h4></a>
+                                                        <h5> @pro.PriceBuy.ToString("#,##0") VND</h5>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        }
+                                    </div>
+                                    <!--Phân trang-->
+                                    <div class="phantrang">
+                                        <div class=" text-right">
+                                            Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                                        </div>
+                                        @Html.PagedListPager(Model, page => Url.Action("Index", "Site", new { page, size = ViewBag.currentSize, slug = ViewBag.Slug }))
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Page -->

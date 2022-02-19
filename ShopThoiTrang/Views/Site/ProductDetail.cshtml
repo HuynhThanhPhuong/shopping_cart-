@@ -1,0 +1,123 @@
+﻿@model MyLibrary.Model.Products
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Chi tiết sản phẩm</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/san-pham">Sản phẩm</a></li>
+                    <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+<!-- Start Shop Detail  -->
+<div class="shop-detail-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-6">
+                <img class="img-fluid" src="~/Public/images/product/@Model.Img"/>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-6">
+                <div class="single-product-details">
+                    <h2>@Model.Name</h2>
+                    <h5> <del></del>@Model.PriceBuy.ToString("#,##0") VND</h5>
+                    <p>
+                        <h4>Mô tả sản phẩm</h4>
+                    <p>
+                        @Model.Metadesc
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="form-group size-st">
+                                <label class="size-label">Size</label>
+                                <select id="basic" class="selectpicker show-tick form-control">
+                                    <option value="0">Size</option>
+                                    <option value="0">S</option>
+                                    <option value="1">M</option>
+                                    <option value="1">L</option>
+                                    <option value="1">XL</option>
+                                    <option value="1">XXL</option>
+                                    <option value="1">3XL</option>
+                                    <option value="1">4XL</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group quantity-box">
+                                <label class="control-label">Số lượng</label>
+                                <input class="form-control" value="0" min="0" max="20" type="number">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="price-box-bar">
+                        <div class="cart-and-bay-btn">
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Mua mới</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+
+                    <div class="add-to-btn">
+                        <div class="add-comp">
+                            <a class="btn hvr-hover" href="#"><i class="fas fa-heart"></i> Thêm vào yêu thích</a>
+                            <a class="btn hvr-hover" href="#"><i class="fas fa-sync-alt"></i> thêm để so sánh</a>
+                        </div>
+                        <div class="share-bar">
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="fb-comments" data-href="https://localhost:44330/@Model.Slug" data-width="100%" data-numposts="5"></div>
+        </div>
+        <div class="row my-5">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Sản phẩm cùng loại</h1>
+                </div>
+                <div class="featured-products-box owl-carousel owl-theme">
+                    @foreach (var proother in ViewBag.ListOther)
+                    {
+                        <div class="item">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <img src="~/Public/images/product/@proother.Img" class="img-fluid" alt="Image">
+                                    <div class="mask-icon">
+                                        <ul>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                        </ul>
+                                        <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                                    </div>
+                                </div>
+                                <div class="why-text text-center">
+                                    <a href="~/@proother.Slug"><h4>@proother.Name</h4></a>
+                                    <h5> @proother.PriceBuy.ToString("#,##0") VND</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Cart -->   

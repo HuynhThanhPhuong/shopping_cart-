@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MyLibrary.Model.Category>
+@foreach (var cat1 in Model)
+{
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="shop-cat-box">
+            <img class="img-fluid" src="~/Public/images/category/@cat1.Img" alt="" />
+            <a class="btn hvr-hover" href="~/@cat1.Slug">@cat1.Name</a>
+        </div>
+    </div>
+}

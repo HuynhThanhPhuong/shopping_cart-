@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MyLibrary.Model.Category>
+<div class="filter-sidebar-left">
+    <div class="title-left">
+        <h3>Categories</h3>
+    </div>
+    <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
+        <div class="list-group-collapse sub-men">
+            @foreach (var cat1 in Model)
+            {
+                <a class="list-group-item list-group-item-action" href="~/@cat1.Slug" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">
+                    @cat1.Name
+                </a>
+            }
+            @*<div class="collapse show" id="sub-men1" data-parent="#list-group-men">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">T-Shirts <small class="text-muted">(50)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Polo T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Round Neck T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">V Neck T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Hooded T-Shirts <small class="text-muted">(20)</small></a>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</div>

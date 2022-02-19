@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Site Metas -->
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="~/Public/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Public/images/apple-touch-icon.png">
+
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Public/css/all.css" rel="stylesheet" />
+    <!-- Site CSS -->
+    <link href="~/Public/css/style.css" rel="stylesheet" />
+
+    <!-- Responsive CSS -->
+    <link href="~/Public/css/responsive.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Public/css/custom.css" rel="stylesheet" />
+    <!--[if lt IE 9]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--[endif]-->
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="I9zo7Qrj"></script>
+    <!-- Start Main Top -->
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-slid-box">
+                        <div id="offer-box" class="carouselTicker">
+                            <ul class="offer-box">
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm 10%! Mua ngay
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 50% - 80% cho Thời trang
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 20% cho toàn bộ giao dịch mua Mã khuyến mãi: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 50%! Mua ngay
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm 10%! Mua ngay
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 50% - 80% cho Thời trang
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 20% cho toàn bộ giao dịch mua Mã khuyến mãi: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Giảm giá 50%! Mua ngay
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="right-phone-box">
+                        <p>SĐT : <a href="#"> 039 524 7789</a></p>
+                    </div>
+                    <div class="our-link">
+                        <ul>
+                            <li><a href="~/Admin/login">Tài khoản</a></li>
+                            <li><a href="#">Địa chỉ</a></li>
+                            <li><a href="~/lien-he">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Top -->
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="~/trang-chu">
+                        <img src="~/Public/images/logo3.png" />
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+                <!-- Menu -->
+                @Html.Action("MainMenu", "Module")
+                <!-- End Menu -->
+                <!-- Start shopping cart -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="side-menu">
+                            <a href="#">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="badge">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End shopping cart -->
+            </div>
+            <!--SHOPPING CART VA SEARCH-->
+            <!-- Start Side Menu shopping cart -->
+            <!-- End Side Menu shopping cart-->
+
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+    <!--END SHOPPING CART VA SEARCH-->
+
+    <section class="clearfix maincontent">
+        @RenderBody()
+    </section>
+    <!-- Start Instagram Feed  -->
+    <div class="instagram-box">
+        <div class="main-instagram owl-carousel owl-theme">
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-01.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-02.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-03.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-04.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-06.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-07.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-08.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-09.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="~/Public/images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Instagram Feed  -->
+    <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>Hệ thống cửa hàng ThewayShop</h4>
+                            <p>
+                                ThewayShop FLAGSHIP STORE: 69 QUANG TRUNG, GÒ VẤP
+
+                            </p>
+                            <p>
+
+                                Store 2: 26 LÝ TỰ TRỌNG Q.1 ( THE NEW PLAYROUND)
+
+                            </p>
+                            <p>
+
+                                Store 3: 350 ĐIỆN BIÊN PHỦ F17 Q. BÌNH THẠNH (G-TOWN)
+
+                            </p>
+                            <p>
+
+                                Store 4: 4 PHẠM NGŨ LÃO, Q.1
+
+                            </p>
+                            <p>
+
+                                Store 5: 136 NGUYỄN HỒNG ĐÀO, Q.TÂN BÌNH
+
+                            </p>
+                            <p>
+
+                                Store 6: 235 PHAN TRUNG, TP.BIÊN HÒA
+
+                            </p>
+                            <p>
+
+                                Store 7: 15 NGUYỄN VIỆT HỒNG, Q.NINH KIỀU, TP. CẦN THƠ
+
+                            </p>
+                            <p>
+
+                                Store 8: Tầng 7 - tòa B2 - VINCOM BÀ TRIỆU, HÀ NỘI
+                            </p>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4>Thông tin</h4>
+                            <ul>
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Dịch vụ khách hàng</a></li>
+                                <li><a href="#">Sơ đồ trang web của chúng tôi</a></li>
+                                <li><a href="#">Điều kiện &amp; Chính sách</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Thông tin giao hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Liên hệ chúng tôi</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: 69 QUANG TRUNG, GÒ VẤP</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="#">039 524 7789</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">thewayshop@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">
+            All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
+            <a href="#">Huỳnh Thanh Phương</a>
+        </p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <!--section End maincontent-->
+    <script src="~/Scripts/css/bootstrap.min.js"></script>
+    <script src="~/Scripts/css/popper.min.js"></script>
+    <script src="~/Scripts/css/jquery-3.2.1.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="~/Scripts/css/jquery.superslides.min.js"></script>
+    <script src="~/Scripts/css/bootstrap-select.js"></script>
+    <script src="~/Scripts/css/inewsticker.js"></script>
+    <script src="~/Scripts/css/bootsnav.js."></script>
+    <script src="~/Scripts/css/images-loded.min.js"></script>
+    <script src="~/Scripts/css/isotope.min.js"></script>
+    <script src="~/Scripts/css/owl.carousel.min.js"></script>
+    <script src="~/Scripts/css/baguetteBox.min.js"></script>
+    <script src="~/Scripts/css/form-validator.min.js"></script>
+    <script src="~/Scripts/css/contact-form-script.js"></script>
+    <script src="~/Scripts/css/custom.js"></script>
+</body>
+</html>

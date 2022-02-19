@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MyLibrary.Model.Post>
+<div class="latest-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Tin tức mới nhất</h1>
+                    <p>Tin tức chúng tôi luôn cập nhật 24/24</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var post in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="~/Public/images/@post.Img" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <a href="~/@post.Slug"><h3>@post.Title</h3></a>
+                                <p>@post.Detail</p>
+                            </div>
+                            <ul class="option-blog">
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>
+

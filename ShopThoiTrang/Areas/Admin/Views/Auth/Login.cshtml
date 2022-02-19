@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Login</title>
+    <style>
+        .khung
+        {
+            max-width:700px;
+            border-radius:10px;
+            margin:auto;
+            border:1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="khung mt-md-5 P-3">
+            <h3 class="text-center">ĐĂNG NHẬP</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <a class="navbar-brand" href="~/trang-chu">
+                        <img src="~/Public/images/logo3.png" />
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label>Tên đăng nhập</label>
+                        <input class="form-control" name="username" required type="text" placeholder="tên đăng nhập hoặc email" />
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input class="form-control" name="password" required type="password" placeholder="mật khẩu" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger" type="submit">Đăng nhập</button>
+                    </div>
+                    <div class="form-group">
+                        @Html.Raw(ViewBag.StrError)
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </body>
+</html>

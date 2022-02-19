@@ -1,0 +1,77 @@
+﻿@model IEnumerable<MyLibrary.Model.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6 text-danger text-uppercase">
+                <strong>DANH SÁCH LOẠI SẢN PHẨM</strong>
+            </div>
+            <div class="col-md-6 text-right">
+                <a class="btn btn-sm btn-success" href="@Url.Action("Create","Category")"><i class="fas fa-plus"></i> Thêm</a>
+                <a class="btn btn-sm btn-danger" href="@Url.Action("Trash","Category")"><i class="fas fa-trash"></i> Thùng rác</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        @Html.Partial("_XMessage")
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>
+                    <input type="checkbox" name="checkAll" value="all" />
+                </th>
+                <th>Tên loại sản phẩm</th>
+                <th>Slug</th>
+                <th>Ngày tạo</th>
+                <th>Chức năng</th>
+                <th>ID</th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checkAll" value="all" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Slug)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Create_At)
+                    </td>
+                    <td>
+                        @if (item.Status == 1)
+                        {
+                            <a class="btn btn-sm btn-success" href="@Url.Action("Status","Category",new { id =item.Id})">
+                                <i class="fas fa-toggle-on"></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-sm btn-danger" href="@Url.Action("Status","Category",new { id =item.Id})">
+                                <i class="fas fa-toggle-off"></i>
+                            </a>
+                        }
+                        <a class="btn btn-sm btn-info" href="@Url.Action("Edit","Category",new { id =item.Id})">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-sm btn-danger" href="@Url.Action("Deltrash","Category",new { id =item.Id})">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
